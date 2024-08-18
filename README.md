@@ -1,5 +1,6 @@
 # pspbot
 pspbot is a Discord bot that helps with PSP homebrew development.<br/>
+[Add pspbot to your server!](https://discord.com/oauth2/authorize?client_id=1203339222069809182)
 # Commands
 `/resolve` allows you to get details about a PSP error code (if it exists on the database).<br/>
 `/search` allows you to search NIDs in PSPLibDoc by its' name or hexademical value.<br/>
