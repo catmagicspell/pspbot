@@ -24,10 +24,42 @@ class ResolveCog(commands.Cog):
         return self.error_data.get(input_code, (None, None))
 
     def find_error_type(self, code):
-        if code.startswith("8002"):
-            return "Kernel"
+        if code.startswith("8000"):
+            return "Common (SCE_ERROR_FACILITY_NULL)"
         elif code.startswith("8001"):
             return "C Standard Library"
+        elif code.startswith("8002"):
+            return "Kernel"
+        elif code.startswith("8011"):
+            return "Utility"
+        elif code.startswith("8021"):
+            return "UMD"
+        elif code.startswith("8022"):
+            return "Memory Stick™"
+        elif code.startswith("8024"):
+            return "USB"
+        elif code.startswith("8026"):
+            return "Audio"
+        elif code.startswith("8041"):
+            return "psp_net/WLAN"
+        elif code.startswith("8042"):
+            return "SAS (Software Audio Synthesizer)"
+        elif code.startswith("8043"):
+            return "Network"
+        elif code.startswith("8044"):
+            return "lib_wave"
+        elif code.startswith("8046"):
+            return "lib_font"
+        elif code.startswith("8051"):
+            return "Psheet"
+        elif code.startswith("8053"):
+            return "DNAS (Dynamic Network Authentication System)"
+        elif code.startswith("8055"):
+            return "PSN"
+        elif code.startswith("8061"):
+            return "Audio/Video Decoder"
+        elif code.startswith("8063"):
+            return "lib_atrac3plus"
         else:
             return "Other"
 
